@@ -10,20 +10,14 @@ export default function ServicesScreen() {
     <View style={styles.wrapper}>
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Serviços</Text>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('MobileDevelopment')}>
           <Text style={styles.optionText}>Desenvolvimento Mobile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('WebDesign')}>
           <Text style={styles.optionText}>Desenvolvimento Web</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('GraphicDesign')}>
           <Text style={styles.optionText}>Design Gráfico</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
-          <Text style={styles.optionText}>Consultoria de TI</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.option}>
-          <Text style={styles.optionText}>Suporte Técnico</Text>
         </TouchableOpacity>
       </ScrollView>
       {/* Menu bar */}

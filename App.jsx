@@ -11,6 +11,9 @@ import SignupScreen from './app/SignUpScreen';
 import ServicesScreen from './app/ServicesScreen';
 import ProfileScreen from './app/ProfileScreen';
 import SettingsScreen from './app/SettingsScreen';
+import WebDesignScreen from './app/WebDesignScreen';
+import MobileDevelopmentScreen from './app/MobileDevelopmentScreen';
+import GraphicDesignScreen from './app/GraphicDesignScreen';
 import { AppRegistry } from 'react-native';
 import { name as appName } from './app.json';
 
@@ -27,6 +30,9 @@ function App() {
         <Stack.Screen name="Services" component={ServicesScreen} options={{headerShown:false}} />
         <Stack.Screen name="Profile" component={ProfileScreen} options={{headerShown:false}} />
         <Stack.Screen name="Settings" component={SettingsScreen} options={{headerShown:false}} />
+        <Stack.Screen name="WebDesign" component={WebDesignScreen} options={{headerShown:false}} />
+        <Stack.Screen name="MobileDevelopment" component={MobileDevelopmentScreen} options={{headerShown:false}} />
+        <Stack.Screen name="GraphicDesign" component={GraphicDesignScreen} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

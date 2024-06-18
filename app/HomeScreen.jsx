@@ -72,16 +72,16 @@ const HomeScreen = () => {
 
       {/* Parte das categorias */}
       <View style={styles.categories}>
-        <TouchableOpacity style={styles.categoryItem}>
-          <Ionicons name="desktop" size={32} color="#2c3e50" />
+        <TouchableOpacity style={styles.categoryItem}onPress={()=> navigation.navigate('WebDesign')}>
+          <Ionicons name="desktop" size={24} color="#2c3e50" />
           <Text style={styles.categoryText}>Web Design</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryItem}>
-          <Ionicons name="phone-portrait" size={32} color="#2c3e50" />
+        <TouchableOpacity style={styles.categoryItem}onPress={()=> navigation.navigate('MobileDevelopment')}>
+          <Ionicons name="phone-portrait" size={24} color="#2c3e50" />
           <Text style={styles.categoryText}>Desenvolvimento Mobile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryItem}>
-          <Ionicons name="brush" size={32} color="#2c3e50" />
+        <TouchableOpacity style={styles.categoryItem}onPress={()=> navigation.navigate('GraphicDesign')}>
+          <Ionicons name="brush" size={24} color="#2c3e50" />
           <Text style={styles.categoryText}>Design Gráfico</Text>
         </TouchableOpacity>
         {/* Adicione mais categorias conforme necessário */}
@@ -142,10 +142,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   searchButton: {
-    padding: 10,
+    padding: 8,
     backgroundColor: '#2c3e50',
     borderRadius: 10,
-    marginLeft: 10,
   },
   categories: {
     flexDirection: 'row',
@@ -200,6 +199,7 @@ const styles = StyleSheet.create({
   },
   menuItem: {
     alignItems: 'center',
+    flex: 1,
   },
   menuText: {
     color: '#fff',
