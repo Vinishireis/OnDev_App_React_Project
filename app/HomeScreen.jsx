@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Image } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, TouchableOpacity, TextInput, Image } from 'react-native';
+import Carousel from 'react-native-reanimated-carousel';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import Carousel from 'react-native-reanimated-carousel';
 
 const AppCarousel = () => {
   const [pagingEnabled, setPagingEnabled] = useState(true);
@@ -42,36 +42,52 @@ const AppCarousel = () => {
 
 const HomeScreen = () => {
   const navigation = useNavigation();
+  const [searchText, setSearchText] = useState('');
+
+  const handleSearch = () => {
+    // Lógica de busca aqui
+    console.log('Pesquisando por:', searchText);
+  };
 
   return (
     <View style={styles.container}>
-      {/* Conteúdo da tela */}
-      <View style={styles.carouselContainer}>
-        <AppCarousel />
-      </View>
-
-      {/* Texto e ícones abaixo do carrossel */}
-      <View style={styles.servicesContainer}>
-        <Text style={styles.servicesTitleText}>Nossos serviços recomendados:</Text>
-
-        {/* Ícones */}
-        <View style={styles.iconsServices}>
-          <TouchableOpacity style={styles.iconItem}>
-            <Ionicons name="globe" size={24} color="black" />
-            <Text style={styles.iconText}>WEB</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconItem}>
-            <Ionicons name="phone-portrait" size={24} color="black" />
-            <Text style={styles.iconText}>MOBILE</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.iconItem}>
-            <Ionicons name="brush" size={24} color="black" />
-            <Text style={styles.iconText}>DESIGN</Text>
+      {/* Parte do header */}
+      <View style={styles.header}>
+        <Text style={styles.title}>Nossos Serviços Recomendados</Text>
+        <View style={styles.searchContainer}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Buscar serviços"
+            value={searchText}
+            onChangeText={setSearchText}
+          />
+          <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
+            <Ionicons name="search" size={24} color="#ffffff" />
           </TouchableOpacity>
         </View>
       </View>
 
-      {/* Menu bar */}
+      {/* Parte do carrossel */}
+      <AppCarousel />
+
+      {/* Parte das categorias */}
+      <View style={styles.categories}>
+        <TouchableOpacity style={styles.categoryItem}>
+          <Ionicons name="desktop" size={32} color="#2c3e50" />
+          <Text style={styles.categoryText}>Web Design</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryItem}>
+          <Ionicons name="phone-portrait" size={32} color="#2c3e50" />
+          <Text style={styles.categoryText}>Desenvolvimento Mobile</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryItem}>
+          <Ionicons name="brush" size={32} color="#2c3e50" />
+          <Text style={styles.categoryText}>Design Gráfico</Text>
+        </TouchableOpacity>
+        {/* Adicione mais categorias conforme necessário */}
+      </View>
+
+      {/* Parte do menu bar */}
       <View style={styles.menuBar}>
         <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('Home')}>
           <Ionicons name="home" size={24} color="white" />
@@ -97,42 +113,77 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#ffffff',
+    paddingTop: 20,
   },
-  carouselContainer: {
-    flex: 1,
-  },
-  servicesContainer: {
-    flex: 1,
-    justifyContent: 'center',
+  header: {
+    marginBottom: 10,
     alignItems: 'center',
-    padding: 20,
   },
-  servicesTitleText: {
-    fontSize: 28,
+  title: {
+    fontSize: 24,
     fontWeight: 'bold',
-    color: '#000',
-    marginBottom: 20,
-    textShadowColor: '#fff',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 4,
+    marginBottom: 10,
   },
-  iconsContainer: {
+  searchContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
+    alignItems: 'center',
+    backgroundColor: '#f2f2f2',
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    marginVertical: 10,
+    width: '90%',
   },
-  iconsServices: {
+  searchInput: {
+    flex: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 10,
+  },
+  searchButton: {
+    padding: 10,
+    backgroundColor: '#2c3e50',
+    borderRadius: 10,
+    marginLeft: 10,
+  },
+  categories: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: '100%',
-    marginTop: -2,
+    justifyContent: 'space-around',
+    paddingHorizontal: 15,
+    marginVertical: 10,
+    marginBottom: 430,
   },
-  iconItem: {
+  categoryItem: {
     alignItems: 'center',
   },
-  iconText: {
+  categoryText: {
     marginTop: 5,
+    fontSize: 12,
+  },
+  carouselItem: {
+    borderRadius: 10,
+    backgroundColor: '#f9f9f9',
+    marginHorizontal: 10,
+    elevation: 5,
+    width: '90%',
+    zIndex: 1,
+  },
+  img: {
+    width: '100%',
+    height: '70%',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  textContainer: {
+    padding: 10,
+  },
+  carouselTitleText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  carouselSubtitleText: {
+    fontSize: 12,
   },
   menuBar: {
     flexDirection: 'row',
@@ -141,7 +192,11 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#ccc',
     paddingVertical: 15,
+    paddingHorizontal: 10,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
   },
   menuItem: {
     alignItems: 'center',
@@ -149,42 +204,6 @@ const styles = StyleSheet.create({
   menuText: {
     color: '#fff',
     fontSize: 12,
-  },
-  carouselItem: {
-    flex: 1,
-    justifyContent: 'center',
-    overflow: 'hidden',
-    borderRadius: 10,
-    margin: 10,
-    elevation: 4,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-  },
-  img: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 10,
-  },
-  textContainer: {
-    position: 'absolute',
-    bottom: 10,
-    left: 10,
-    right: 10,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    borderRadius: 5,
-    padding: 5,
-  },
-  carouselTitleText: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: '#fff',
-    marginBottom: 5,
-  },
-  carouselSubtitleText: {
-    fontSize: 12,
-    color: '#fff',
   },
 });
 
