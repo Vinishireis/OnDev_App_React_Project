@@ -64,8 +64,20 @@ export default function SignupScreen() {
   
       if (response && response.data && response.data.success) {
         Alert.alert('Sucesso', 'Conta criada com sucesso', [
-          { text: 'OK', onPress: () => navigation.navigate('Login') }
-        ]);
+          { 
+            text: 'OK',
+            onPress: () => {
+              navigation.navigate('Login');
+              navigation.navigate('Profile', {
+                nome: nome,
+                sobrenome: sobrenome,
+                email: email,
+                userType: userType,
+              });
+              
+            }
+          }
+        ]);      
       } else if (response && response.data && response.data.message) {
         throw new RegistrationError(response.data.message || 'Erro desconhecido ao criar conta');
       } else {
