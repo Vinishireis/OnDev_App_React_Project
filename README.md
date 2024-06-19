@@ -11,7 +11,6 @@ Este aplicativo foi desenvolvido com o objetivo de fornecer serviços fictícios
 - **Web Design**: Tela com descrição e ícones relacionados a serviços de Web Design.
 - **Desenvolvimento Mobile**: Tela com descrição e ícones relacionados a serviços de Desenvolvimento Mobile.
 - **Design Gráfico**: Tela com descrição e ícones relacionados a serviços de Design Gráfico.
-- **Calendário**: Um belo calendário posicionado abaixo dos ícones de Web Design, Desenvolvimento Mobile e Design Gráfico.
 - **Lista de Serviços**: Busca e exibição de serviços fictícios.
 - **Barra de Menu**: Navegação fácil entre as diferentes seções do aplicativo.
 - **Tema de Cores**: Integração das cores "#007bff" (azul) e "#800080" (roxo) no design do aplicativo.
@@ -42,10 +41,8 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 ## Estrutura do Projeto
 
-- **/src**
-  - **/components**: Componentes reutilizáveis do React Native.
-  - **/screens**: Telas principais do aplicativo (Web Design, Desenvolvimento Mobile, Design Gráfico).
-  - **/services**: Serviços para buscar dados fictícios.
+- **/app**
+  - **/database**: Banco de Dados usado para o aplicativo.
   - **/assets**: Recursos estáticos como imagens e ícones.
   - **/styles**: Arquivos de estilos para o aplicativo.
 
@@ -68,15 +65,11 @@ Se você deseja contribuir para este projeto, por favor, siga os passos abaixo:
 4. Faça o push para a branch (`git push origin feature/nova-funcionalidade`).
 5. Abra um Pull Request.
 
-## Licença
-
-Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## Contato
 
 Se você tiver alguma dúvida, sinta-se à vontade para entrar em contato:
 
 - **Empresa**: OnDev
-- **Email**: contato@ondev.com
+- **Email**: ondev.org@gmail.com
 
 Obrigado por utilizar o projeto React Native da OnDev!
