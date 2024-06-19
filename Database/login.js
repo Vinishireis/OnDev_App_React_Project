@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs';
 async function login(email, password, userType) {
   try {
     const hash = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-    const response = await axios.post('http://192.168.15.13:3000/login', { email, password: hash, userType });
+    const response = await axios.post('http://172.20.10.10:3000/login', { email, password: hash, userType });
 
     if (response.data.success) {
       const isValidPassword = await bcrypt.compare(password, response.data.user.password);

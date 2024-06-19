@@ -23,7 +23,7 @@ export default function LoginScreen() {
       const hash = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
       console.log('Hash:', hash);
 
-      const response = await axios.post('http://192.168.15.13:3000/login', {
+      const response = await axios.post('http://172.20.10.10:3000/login', {
         email,
         password: hash,
         userType,

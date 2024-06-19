@@ -4,11 +4,11 @@
     "slug": "OnDev_App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#007bff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,15 +21,21 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#800080"
+      },
+      "package": "com.vinishireis.OnDev_App"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b79e4c32-e1e6-4289-bd28-08270b57b260"
+      }
+    }
   }
 }

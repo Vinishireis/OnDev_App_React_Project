@@ -54,7 +54,7 @@ export default function SignupScreen() {
       }
   
       const hash = CryptoJS.SHA256(password).toString(CryptoJS.enc.Hex);
-      const response = await axios.post('http://192.168.15.13:3000/signup', {
+      const response = await axios.post('http://172.20.10.10:3000/signup', {
         nome: nome,
         sobrenome: sobrenome,
         email: email,
@@ -68,13 +68,6 @@ export default function SignupScreen() {
             text: 'OK',
             onPress: () => {
               navigation.navigate('Login');
-              navigation.navigate('Profile', {
-                nome: nome,
-                sobrenome: sobrenome,
-                email: email,
-                userType: userType,
-              });
-              
             }
           }
         ]);      

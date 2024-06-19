@@ -3,7 +3,7 @@ import axios from 'axios';
 // Função de inscrição
 async function signup(userData, tableName) {
   try {
-    const response = await axios.post('http://192.168.15.13:3000/signup', {
+    const response = await axios.post('http://172.20.10.10:3000/signup', {
       nome: userData.fullName,
       sobrenome: userData.surname,
       email: userData.email,
