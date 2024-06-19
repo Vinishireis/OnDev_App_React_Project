@@ -48,6 +48,11 @@ Para executar este projeto localmente, siga os passos abaixo:
     node server.js
     ```
 
+
+ 5. **Faça alterações na url para funcionar o seu banco de dados com o aplicativo**
+    ```sh
+    **await axios.post('http://172.20.10.10:3000/login'**, onde estiver com essa url troque pela sua conexão IPV4 do Computador await axios.post('http://_____________:3000/login')
+    **await axios.post('http://172.20.10.10:3000/signup'**, aqui também em signup faça a mesma coisa sempre deixe o final :3000/ o local que está chamando.
 ## Estrutura do Projeto
 
   - **/app**
