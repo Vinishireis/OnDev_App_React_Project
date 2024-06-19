@@ -22,8 +22,8 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
     ```sh
-    git clone https://github.com/OnDev/react-native-project.git
-    cd react-native-project
+    https://github.com/Vinishireis/OnDev_App_React_Project.git
+    cd OnDev_App
     ```
 
 2. **Instale as dependências:**
