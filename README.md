@@ -34,14 +34,23 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 3. **Execute o aplicativo:**
     ```sh
-    npx react-native run-android
-    ou
-    npx react-native run-ios
+    cd OnDev_App
+
+    ls
+
+    npx expo start
+    ```
+
+ 4. **Execute o banco de dados Server.js:**
+    ```sh
+    cd OnDev_App
+
+    node server.js
     ```
 
 ## Estrutura do Projeto
 
-- **/app**
+  - **/app**
   - **/database**: Banco de Dados usado para o aplicativo.
   - **/assets**: Recursos estáticos como imagens e ícones.
   - **/styles**: Arquivos de estilos para o aplicativo.
