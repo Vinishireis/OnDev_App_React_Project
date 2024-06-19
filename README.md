@@ -6,6 +6,10 @@ Bem-vindo ao projeto React Native da OnDev! Este projeto foi criado para demonst
 
 Este aplicativo foi desenvolvido com o objetivo de fornecer serviços fictícios nas áreas de Web Design, Desenvolvimento Mobile e Design Gráfico. Ele inclui várias funcionalidades, como a exibição de serviços em uma lista, a criação de uma barra de menu e a integração de cores específicas para o tema.
 
+
+![Telas_Ondev](https://github.com/Vinishireis/OnDev_App_React_Project/assets/95651095/38baafb1-6b0d-4923-9477-28aab2b12d5f)
+
+
 ## Funcionalidades
 
 - **Web Design**: Tela com descrição e ícones relacionados a serviços de Web Design.
