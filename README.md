@@ -1,20 +1,82 @@
-# Reanimated example
+# OnDev React Native Project
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-  <!-- Web -->
-</p>
+Bem-vindo ao projeto React Native da OnDev! Este projeto foi criado para demonstrar as capacidades de desenvolvimento de Web Design, Desenvolvimento Mobile e Design Gráfico.
 
-## 🚀 How to use
+## Visão Geral
 
-> `npx create-expo my-app --example with-reanimated`
+Este aplicativo foi desenvolvido com o objetivo de fornecer serviços fictícios nas áreas de Web Design, Desenvolvimento Mobile e Design Gráfico. Ele inclui várias funcionalidades, como a exibição de serviços em uma lista, a criação de uma barra de menu e a integração de cores específicas para o tema.
 
-- Run `yarn` or `npm install`
-- Run `yarn start` or `npm run start` to try it out.
+## Funcionalidades
 
-## 📝 Notes
+- **Web Design**: Tela com descrição e ícones relacionados a serviços de Web Design.
+- **Desenvolvimento Mobile**: Tela com descrição e ícones relacionados a serviços de Desenvolvimento Mobile.
+- **Design Gráfico**: Tela com descrição e ícones relacionados a serviços de Design Gráfico.
+- **Calendário**: Um belo calendário posicionado abaixo dos ícones de Web Design, Desenvolvimento Mobile e Design Gráfico.
+- **Lista de Serviços**: Busca e exibição de serviços fictícios.
+- **Barra de Menu**: Navegação fácil entre as diferentes seções do aplicativo.
+- **Tema de Cores**: Integração das cores "#007bff" (azul) e "#800080" (roxo) no design do aplicativo.
 
-- [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
+## Instalação
+
+Para executar este projeto localmente, siga os passos abaixo:
+
+1. **Clone o repositório:**
+    ```sh
+    git clone https://github.com/OnDev/react-native-project.git
+    cd react-native-project
+    ```
+
+2. **Instale as dependências:**
+    ```sh
+    npm install
+    ou
+    yarn install
+    ```
+
+3. **Execute o aplicativo:**
+    ```sh
+    npx react-native run-android
+    ou
+    npx react-native run-ios
+    ```
+
+## Estrutura do Projeto
+
+- **/src**
+  - **/components**: Componentes reutilizáveis do React Native.
+  - **/screens**: Telas principais do aplicativo (Web Design, Desenvolvimento Mobile, Design Gráfico).
+  - **/services**: Serviços para buscar dados fictícios.
+  - **/assets**: Recursos estáticos como imagens e ícones.
+  - **/styles**: Arquivos de estilos para o aplicativo.
+
+## Cores do Tema
+
+O projeto utiliza as seguintes cores como parte do tema:
+
+- **Azul**: `#007bff`
+- **Roxo**: `#800080`
+
+Estas cores são aplicadas ao fundo e a outros elementos da UI para manter uma identidade visual consistente.
+
+## Contribuição
+
+Se você deseja contribuir para este projeto, por favor, siga os passos abaixo:
+
+1. Faça um fork do projeto.
+2. Crie uma branch para sua funcionalidade ou correção (`git checkout -b feature/nova-funcionalidade`).
+3. Commit suas alterações (`git commit -m 'Adiciona nova funcionalidade'`).
+4. Faça o push para a branch (`git push origin feature/nova-funcionalidade`).
+5. Abra um Pull Request.
+
+## Licença
+
+Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Contato
+
+Se você tiver alguma dúvida, sinta-se à vontade para entrar em contato:
+
+- **Empresa**: OnDev
+- **Email**: contato@ondev.com
+
+Obrigado por utilizar o projeto React Native da OnDev!
