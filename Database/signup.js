@@ -3,7 +3,7 @@ import axios from 'axios';
 // Função de inscrição
 async function signup(userData, tableName) {
   try {
-    const response = await axios.post('http://172.20.10.10:3000/signup', {
+    const response = await axios.post('http://10.1.2.241:8081/signup', {
       nome: userData.fullName,
       sobrenome: userData.surname,
       email: userData.email,
@@ -21,7 +21,7 @@ async function signup(userData, tableName) {
 // Função para testar a conexão com o servidor
 async function testarConexaoServidor() {
   try {
-    const response = await axios.get('http://192.168.15.13:3000/testar-conexao');
+    const response = await axios.get('http://10.1.2.241:8081/testar-conexao');
     console.log('Resposta do servidor:', response.data);
   } catch (error) {
     console.error('Erro ao testar a conexão com o servidor:', error.response ? error.response.data : error.message);
